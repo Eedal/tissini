@@ -11,7 +11,7 @@
               <v-card-text>
                 <v-form>
 
-                  <v-text-field label="Teléfono" v-model="mobilephone" prepend-inner-icon="mdi-phone" type="email" class="rounded-0" outlined  color="white" v-on:keyup="login()"></v-text-field>
+                  <v-text-field  maxlength="10" label="Teléfono" v-model="mobilephone" prepend-inner-icon="mdi-phone"  class="rounded-0" outlined  color="white" v-on:keyup="login()"></v-text-field>
                 </v-form>
               </v-card-text>
               <v-card-actions class="ml-6 mr-6 text-center">

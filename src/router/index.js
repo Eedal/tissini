@@ -5,26 +5,26 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/cliente',
-    component: () => import(/* webpackChunkName: "about" */ '../layouts/Client.vue'),
+    component: () => import(/* webpackChunkName: "client" */ '../layouts/Client.vue'),
     meta: { requiresAuth: true},
     children: [
       {
         path: '/categorias',
         name: 'Home',
         meta: { requiresAuth: true},
-        component: () => import(/* webpackChunkName: "about" */ '../views/Category.vue')
+        component: () => import(/* webpackChunkName: "category" */ '../views/Category.vue')
       },
       {
         path: '/categorias/:id',
         name: 'Catalogue',
         meta: { requiresAuth: true},
-        component: () => import(/* webpackChunkName: "about" */ '../views/Catalogue.vue')
+        component: () => import(/* webpackChunkName: "catalogue" */ '../views/Catalogue.vue')
       },
       {
       path: '/carrito',
         name: 'Cart',
         meta: { requiresAuth: true},
-        component: () => import(/* webpackChunkName: "about" */ '../views/Cart.vue')
+        component: () => import(/* webpackChunkName: "cart" */ '../views/Cart.vue')
       },
       
     ]
@@ -32,7 +32,7 @@ const routes = [
   {
     path: '/',
     name: 'Login',
-    component: () => import(/* webpackChunkName: "about" */ '../views/auth/Login.vue'),
+    component: () => import(/* webpackChunkName: "login" */ '../views/auth/Login.vue'),
     meta: { requiresAuth: false}
   }
 ]
